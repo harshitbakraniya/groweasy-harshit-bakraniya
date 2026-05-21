@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# GrowEasy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GrowEasy is a modern web application for managing leads and customer relationships. It features a responsive, dynamic, and intuitive user interface built with React, TypeScript, Tailwind CSS, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Lead Management:** View, search, and manage leads in an interactive data table.
+- **Detailed Lead View:** Click on any lead to see detailed information and activity history in a dedicated slide-out pane.
+- **Collapsible Sidebar Navigation:** Easily navigate through the dashboard, lead generation, and team management tools with a collapsible sidebar for more screen real estate.
+- **Responsive Design:** A beautiful, responsive, and dynamic UI built with Tailwind CSS.
+- **Modern Tech Stack:** Fast development experience powered by Vite, React, and TypeScript.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React
+- **Language:** TypeScript
+- **Bundler:** Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router v6
+- **Icons:** Lucide React
+- **UI Components:** Shadcn UI (Radix UI + Tailwind)
+- **Table:** TanStack Table v8
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   ```bash
+   git clone https://github.com/harshitbakraniya/groweasy-harshit-bakraniya.git
+   cd groweasy-harshit-bakraniya
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Install dependencies:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`.
+
+## Project Structure
+
+- `src/components/`: Reusable UI components (Sidebar, Header, Tables, etc.)
+- `src/components/ui/`: Base UI components
+- `src/pages/`: Main application pages (e.g., Manage Leads)
+- `src/contexts/`: React Context providers (e.g., SidebarContext)
+- `src/lib/`: Utility functions
+- `src/assets/`: Static assets like images and icons
