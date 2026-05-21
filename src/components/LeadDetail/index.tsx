@@ -2,8 +2,8 @@ import {
   X,
   Pencil,
   PhoneCall,
-  Megaphone,
-  Share,
+  Bot,
+  Share2,
   Mail,
   Tag,
   UserRound,
@@ -65,17 +65,17 @@ const LeadDetail = ({
       <div className="overflow-y-auto flex-1">
         <div className="mt-5">
           <div className="flex items-center gap-2">
-            <span className="border border-gray-300 p-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition-all">
+            <span className="border border-gray-300 p-2 rounded-full cursor-pointer hover:bg-gray-100 transition-all">
               <PhoneCall size={16} />
             </span>
-            <span className="border border-gray-300 p-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition-all">
+            <span className="border border-gray-300 p-2 rounded-full cursor-pointer hover:bg-gray-100 transition-all">
               <WhatsApp size={16} />
             </span>
-            <span className="border border-gray-300 p-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition-all">
-              <Share size={16} />
+            <span className="border border-gray-300 p-2 rounded-full cursor-pointer hover:bg-gray-100 transition-all">
+              <Share2 size={16} />
             </span>
-            <span className="border border-gray-300 p-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition-all">
-              <Megaphone size={16} />
+            <span className="border border-[hsla(var(--color-primary))]/20 p-2 rounded-full cursor-pointer hover:bg-gray-100 transition-all bg-[hsla(var(--color-secondary))] text-[">
+              <Bot size={16} />
             </span>
           </div>
           <div className="grid grid-cols-2 gap-2 mt-4">
@@ -159,7 +159,7 @@ const LeadDetail = ({
             type="single"
             collapsible
             defaultValue="item-1"
-            className="max-w-lg mt-4"
+            className="w-full mt-4"
           >
             <AccordionItem value="item-1">
               <AccordionTrigger>Lead Summary</AccordionTrigger>

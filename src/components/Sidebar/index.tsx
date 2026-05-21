@@ -114,9 +114,11 @@ const Sidebar = () => {
         <Menu items={menuConfig} isCollapsed={isCollapsed} />
       </div>
       <div className="px-6 py-8 border-t border-gray-200">
-        <div className="flex items-center gap-2 text-sm">
+        <div
+          className={`flex items-center ${isCollapsed ? "justify-center" : ""} gap-2 text-sm`}
+        >
           <CircleUser />
-          <p>Business Center</p>
+          {!isCollapsed && <p>Business Center</p>}
         </div>
       </div>
     </aside>
